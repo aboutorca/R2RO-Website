@@ -1,8 +1,7 @@
+import R2ROWebsite from "./R2ROWebsite";
+
 function Home() {
-  return (
-    <div className="w-screen h-screen">
-    </div>
-  )
+  return <R2ROWebsite />;
 }
 
-export default Home
+export default Home;
