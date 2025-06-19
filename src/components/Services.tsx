@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Wrench,
@@ -9,11 +9,14 @@ import {
   Phone,
   Mail,
   MapPin,
+  Menu,
+  X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     {
@@ -101,7 +104,7 @@ const Services = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-10 w-auto"
+                  className="h-14 w-auto"
                 />
               </button>
             </div>
@@ -132,16 +135,62 @@ const Services = () => {
                 Book Now
               </Button>
             </div>
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center space-x-2">
               <Button
                 className="bg-[#8FAABF] hover:bg-[#D1A255] text-[#F5F3EE] font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
                 onClick={() => navigate("/#booking")}
               >
                 Book Now
               </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-[#315B40] hover:text-[#D1A255]"
+              >
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </Button>
             </div>
           </div>
         </div>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              <button
+                onClick={() => {
+                  navigate("/");
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => {
+                  navigate("/about");
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                About
+              </button>
+              <button
+                onClick={() => {
+                  navigate("/testimonials");
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                Testimonials
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -297,7 +346,7 @@ const Services = () => {
                 <li>
                   <button
                     onClick={() => navigate("/services")}
-                    className="text-gray-300 hover:text-[#D1A255] transition-colors"
+                    className="text-gray-300 hover:text-[#D1A255] transition-colors block w-full text-left"
                   >
                     Services
                   </button>
@@ -305,7 +354,7 @@ const Services = () => {
                 <li>
                   <button
                     onClick={() => navigate("/about")}
-                    className="text-gray-300 hover:text-[#D1A255] transition-colors"
+                    className="text-gray-300 hover:text-[#D1A255] transition-colors block w-full text-left"
                   >
                     About Us
                   </button>
@@ -313,7 +362,7 @@ const Services = () => {
                 <li>
                   <button
                     onClick={() => navigate("/testimonials")}
-                    className="text-gray-300 hover:text-[#D1A255] transition-colors"
+                    className="text-gray-300 hover:text-[#D1A255] transition-colors block w-full text-left"
                   >
                     Testimonials
                   </button>
@@ -321,7 +370,7 @@ const Services = () => {
                 <li>
                   <button
                     onClick={() => navigate("/#booking")}
-                    className="text-gray-300 hover:text-[#D1A255] transition-colors"
+                    className="text-gray-300 hover:text-[#D1A255] transition-colors block w-full text-left"
                   >
                     Book Service
                   </button>

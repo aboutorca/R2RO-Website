@@ -19,6 +19,8 @@ import {
   DollarSign,
   Award,
   Users,
+  Menu,
+  X,
 } from "lucide-react";
 
 const R2ROWebsite = () => {
@@ -31,6 +33,7 @@ const R2ROWebsite = () => {
     preferredTime: "",
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,7 +66,7 @@ const R2ROWebsite = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-10 w-auto"
+                  className="h-14 w-auto"
                 />
               </button>
             </div>
@@ -97,7 +100,7 @@ const R2ROWebsite = () => {
                 Book Now
               </Button>
             </div>
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center space-x-2">
               <Button
                 className="bg-[#8FAABF] hover:bg-[#D1A255] text-[#F5F3EE] font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
                 onClick={() =>
@@ -108,9 +111,55 @@ const R2ROWebsite = () => {
               >
                 Book Now
               </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-[#315B40] hover:text-[#D1A255]"
+              >
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </Button>
             </div>
           </div>
         </div>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              <button
+                onClick={() => {
+                  window.location.href = "/services";
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => {
+                  window.location.href = "/about";
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                About
+              </button>
+              <button
+                onClick={() => {
+                  window.location.href = "/testimonials";
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors py-2"
+              >
+                Testimonials
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#315B40] to-[#8FAABF] text-white py-20 lg:py-32">
@@ -642,40 +691,36 @@ const R2ROWebsite = () => {
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <button
-                    onClick={() => (window.location.href = "/services")}
+                  <a
+                    href="/services"
                     className="text-gray-300 hover:text-[#D1A255] transition-colors"
                   >
                     Services
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button
-                    onClick={() => (window.location.href = "/about")}
+                  <a
+                    href="/about"
                     className="text-gray-300 hover:text-[#D1A255] transition-colors"
                   >
                     About Us
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button
-                    onClick={() => (window.location.href = "/testimonials")}
+                  <a
+                    href="/testimonials"
                     className="text-gray-300 hover:text-[#D1A255] transition-colors"
                   >
                     Testimonials
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button
-                    onClick={() =>
-                      document
-                        .getElementById("booking")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
+                  <a
+                    href="/#booking"
                     className="text-gray-300 hover:text-[#D1A255] transition-colors"
                   >
                     Book Service
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
