@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Wrench,
@@ -17,6 +17,11 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Set page title on mount
+  useEffect(() => {
+    document.title = "Services | R2RO";
+  }, []);
 
   const services = [
     {

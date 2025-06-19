@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -19,6 +19,11 @@ import { useNavigate } from "react-router-dom";
 const About = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Set page title on mount
+  useEffect(() => {
+    document.title = "About | R2RO";
+  }, []);
 
   const teamMembers = [
     {
