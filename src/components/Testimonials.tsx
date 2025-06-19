@@ -20,6 +20,11 @@ const Testimonials = () => {
   const [loading, setLoading] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Set page title on mount
+  useEffect(() => {
+    document.title = "Testimonials | R2RO";
+  }, []);
+
   // Placeholder reviews - in a real implementation, these would come from Google Business API
   const placeholderReviews = [
     {
@@ -456,7 +461,7 @@ const Testimonials = () => {
 
           <div className="border-t border-gray-600 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
+              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
               insured.
             </p>
           </div>

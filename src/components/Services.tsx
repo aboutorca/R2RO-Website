@@ -402,8 +402,7 @@ const Services = () => {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 mr-3 text-[#D1A255] mt-0.5" />
                   <span className="text-gray-300">
-                    Serving Portland Metro
-                    <br />& SW Washington
+                    NW Washington
                   </span>
                 </div>
               </div>
@@ -412,7 +411,7 @@ const Services = () => {
 
           <div className="border-t border-gray-600 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
+              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
               insured.
             </p>
           </div>
