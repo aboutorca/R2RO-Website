@@ -73,19 +73,19 @@ const R2ROWebsite = () => {
             <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
               <button
                 onClick={() => (window.location.href = "/services")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => (window.location.href = "/about")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => (window.location.href = "/testimonials")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Testimonials
               </button>
@@ -656,7 +656,7 @@ const R2ROWebsite = () => {
               <img
                 src="/images/R2RO Logo (Final).svg"
                 alt="R2RO Repair"
-                className="h-12 w-auto mb-6"
+                className="h-18 lg:h-24 w-auto mb-6"
               />
               <p className="text-gray-300 mb-6 max-w-md">
                 Reliable home repair and appliance service for busy Pacific

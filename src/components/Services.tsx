@@ -109,7 +109,7 @@ const Services = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-14 w-auto"
+                  className="h-16 lg:h-20 w-auto"
                 />
               </button>
             </div>
@@ -406,9 +406,7 @@ const Services = () => {
                 </div>
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 mr-3 text-[#D1A255] mt-0.5" />
-                  <span className="text-gray-300">
-                    NW Washington
-                  </span>
+                  <span className="text-gray-300">NW Washington</span>
                 </div>
               </div>
             </div>
@@ -416,8 +414,8 @@ const Services = () => {
 
           <div className="border-t border-gray-600 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
-              insured.
+              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded,
+              and insured.
             </p>
           </div>
         </div>

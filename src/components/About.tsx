@@ -87,7 +87,7 @@ const About = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-14 w-auto"
+                  className="h-16 lg:h-20 w-auto"
                 />
               </button>
             </div>
@@ -482,8 +482,8 @@ const About = () => {
 
           <div className="border-t border-gray-600 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded, and
-              insured.
+              &copy; 2024 R2RO Repair. All rights reserved. Licensed, bonded,
+              and insured.
             </p>
           </div>
         </div>
