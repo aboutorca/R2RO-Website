@@ -109,27 +109,27 @@ const Services = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-16 lg:h-20 w-auto"
+                  className="h-14 w-auto"
                 />
               </button>
             </div>
             <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
               <button
                 onClick={() => navigate("/")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Home
               </button>
-              <span className="font-semibold text-[#D1A255]">Services</span>
+              <span className="font-semibold text-lg lg:text-xl text-[#D1A255]">Services</span>
               <button
                 onClick={() => navigate("/about")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => navigate("/testimonials")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Testimonials
               </button>

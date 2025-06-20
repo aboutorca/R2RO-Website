@@ -135,30 +135,30 @@ const Testimonials = () => {
                 <img
                   src="/images/R2RO Logo (Final).svg"
                   alt="R2RO Repair"
-                  className="h-16 lg:h-20 w-auto"
+                  className="h-14 w-auto"
                 />
               </button>
             </div>
             <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
               <button
                 onClick={() => navigate("/")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Home
               </button>
               <button
                 onClick={() => navigate("/services")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => navigate("/about")}
-                className="font-semibold text-[#315B40] hover:text-[#D1A255] transition-colors"
+                className="font-semibold text-lg lg:text-xl text-[#315B40] hover:text-[#D1A255] transition-colors"
               >
                 About
               </button>
-              <span className="font-semibold text-[#D1A255]">Testimonials</span>
+              <span className="font-semibold text-lg lg:text-xl text-[#D1A255]">Testimonials</span>
               <Button
                 className="bg-[#8FAABF] hover:bg-[#D1A255] text-[#F5F3EE] font-semibold px-6 py-2 rounded-lg transition-colors"
                 onClick={() => navigate("/#booking")}
