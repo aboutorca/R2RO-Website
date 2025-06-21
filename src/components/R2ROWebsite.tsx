@@ -34,19 +34,33 @@ const R2ROWebsite = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 5000);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      problem: "",
-      preferredTime: "",
-    });
+    setLoading(true);
+    try {
+      const res = await fetch("/api/book", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("Network error");
+      setShowSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        problem: "",
+        preferredTime: "",
+      });
+      setTimeout(() => setShowSuccess(false), 5000);
+    } catch (_) {
+      alert("Sorry, something went wrong. Please call us at (360) 824-2667.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleInputChange = (
@@ -557,7 +571,7 @@ const R2ROWebsite = () => {
               </div>
 
               <Button
-                type="submit"
+                type="submit" disabled={loading}
                 className="w-full bg-[#D1A255] hover:bg-[#315B40] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors"
               >
                 Submit Service Request
