@@ -358,7 +358,7 @@ const Testimonials = () => {
               <img
                 src="/images/R2RO Logo (Final).svg"
                 alt="R2RO Repair"
-                className="h-12 w-auto mb-6"
+                className="h-18 lg:h-24 w-auto mb-6"
               />
               <p className="text-gray-300 mb-6 max-w-md">
                 Reliable home repair and appliance service for busy Pacific
