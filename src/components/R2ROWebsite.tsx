@@ -441,14 +441,14 @@ const R2ROWebsite = () => {
               Book Your Service Today
             </h2>
             <p className="text-xl text-gray-600">
-              Get started with a quick form - we'll call you back within 2 hours
+              Get started with a quick form — we'll call you back as soon as possible
             </p>
           </div>
 
           {showSuccess && (
             <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-8 text-center">
               <p className="font-semibold">
-                Thank you! We'll contact you within 2 hours to schedule your
+                Thank you! We'll contact you as soon as possible to schedule your
                 service.
               </p>
             </div>
